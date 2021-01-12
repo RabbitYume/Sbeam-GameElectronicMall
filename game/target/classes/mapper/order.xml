@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="game.dao.OrderDao">
+
+	<!-- 修改单条订单 -->
+	<insert id="updateOrder" parameterType="Order">
+		update gameorder set
+		gameid=#{gameid},price=#{price},
+		pay=#{pay}
+		where id=#{id}
+	</insert>
+
+	<!-- 删除单条订单 -->
+	<delete id="deleteOneOrder" parameterType="Integer">
+		delete from gameorder
+		where
+		id=#{id}
+	</delete>
+
+	<!-- 删除订单 -->
+	<delete id="deleteOrder" parameterType="Integer">
+		delete from gameorder
+		where
+		orderid=#{orderid}
+	</delete>
+
+	<!-- 查询所有导出excel -->
+	<select id="output" resultType="Order">
+		select o.id, o.orderid, g.gamename, o.price, o.time, o.pay,
+		o.username, k.gamekey
+		from gameorder o
+		LEFT JOIN gamekey k ON o.orderid =
+		k.orderid and o.gameid = k.gameid
+		LEFT JOIN game g ON o.gameid = g.id
+	</select>
+
+	<!-- 后台查询所有 -->
+	<select id="findAllOrder" parameterType="Order"
+		resultType="Order">
+		select o.id, o.orderid, g.gamename, o.price, o.time, o.pay,
+		o.username, k.gamekey
+		from gameorder o
+		LEFT JOIN gamekey k ON o.orderid =
+		k.orderid and o.gameid = k.gameid
+		LEFT JOIN game g ON o.gameid = g.id
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	<!-- 查询总数 -->
+	<select id="selectOrderCount" parameterType="Order"
+		resultType="Integer">
+		select count(*) from gameorder
+	</select>
+
+	<!-- 后台模糊查询2 -->
+	<select id="findLikeOrderid" parameterType="Order"
+		resultType="Order">
+		select o.id, o.orderid, g.gamename, o.price, o.time, o.pay,
+		o.username,
+		k.gamekey
+		from gameorder o
+		LEFT JOIN gamekey k ON o.orderid =
+		k.orderid and
+		o.gameid = k.gameid
+		LEFT JOIN game g ON o.gameid = g.id
+		where o.orderid like
+		CONCAT("%",CONCAT(#{orderid},"%"))
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 模糊查询总数 -->
+	<select id="selectLikeOrderCount" parameterType="Order"
+		resultType="Integer">
+		select count(*) from gameorder
+		where orderid like
+		CONCAT("%",CONCAT(#{orderid},"%"))
+	</select>
+	
+	<!-- 用户查询所有订单id -->
+	<select id="userfindAllOrder" parameterType="Order"
+		resultType="Order">
+		select orderid from gameorder 
+		where username=#{username}
+		group by orderid
+		order by id desc
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	
+	<!-- 用户查询总数 -->
+	<select id="userselectOrderCount" parameterType="Order"
+		resultType="Integer">
+		select count(*) from gameorder where username=#{username}
+	</select>
+	
+	<!-- 用户查询支付情况 -->
+	<select id="userselectOrderPay" parameterType="Integer"
+		resultType="String">
+		select pay from gameorder where orderid=#{orderid} group by orderid
+	</select>
+	
+	<!-- 用户查询下单时间 -->
+	<select id="userselectOrderTime" parameterType="Integer"
+		resultType="String">
+		select time from gameorder where orderid=#{orderid} group by orderid
+	</select>
+	
+	<!-- 用户查询总金额 -->
+	<select id="userselectOrderSumPay" parameterType="Integer"
+		resultType="Double">
+		select SUM(price) from gameorder where orderid=#{orderid}
+	</select>
+	
+	<!-- 用户查询订单详情 -->
+	<select id="userfindOrderid" parameterType="Integer"
+		resultType="Order">
+		select o.orderid, g.gamename, o.price, o.time,o.username,k.gamekey,o.gameid
+		from gameorder o
+		LEFT JOIN gamekey k ON o.orderid =
+		k.orderid and
+		o.gameid = k.gameid
+		LEFT JOIN game g ON o.gameid = g.id
+		where o.orderid=#{orderid}
+	</select>
+	
+	<!-- 添加 -->
+	<insert id="insertOrder" parameterType="Order">
+		insert into
+		gameorder(orderid,gameid,price,time,pay,username)
+		values(#{orderid},#{gameid},#{price},#{time},#{pay},#{username})
+	</insert>
+	
+	<!-- 添加key -->
+	<insert id="insertKey" parameterType="Order">
+		insert into
+		gamekey(orderid,gameid,gamekey)
+		values(#{orderid},#{gameid},#{gamekey})
+	</insert>
+	
+	<!-- 修改订单状态 -->
+	<insert id="updateOrderPay" parameterType="Order">
+		update gameorder set pay=#{pay}
+		where orderid=#{orderid}
+	</insert>
+
+</mapper>

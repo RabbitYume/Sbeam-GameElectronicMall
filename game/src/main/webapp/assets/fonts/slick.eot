@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Page not found &#8211; Solver WP</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Solver WP &raquo; Feed" href="https://solverwp.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Solver WP &raquo; Comments Feed" href="https://solverwp.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/solverwp.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://solverwp.com/wp-includes/css/dist/block-library/style.min.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='testtheme-font-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7CDroid%2BSerif%3A400%2C700%2C400italic%2C700italic+%7C+Roboto%2BSlab%3A400%2C100%2C300%2C700&#038;ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='nice-select-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/nice-select.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/animate.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/bootstrap.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/magnific-popup.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/owl.carousel.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/slick.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-theme-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/slick-theme.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://solverwp.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='flaticon-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/flaticon.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='themify-icons-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/themify-icons.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='testtheme-main-style-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+<style id='testtheme-main-style-inline-css' type='text/css'>
+
+          
+
+    
+     
+    
+
+    
+
+    
+
+     
+ 	    .nav-wrapper--alt.nav-one-bg .navbar-area .nav-container .navbar-collapse .navbar-nav li.current_page_item a{
+            color:var(--main-color-one);
+        }
+
+ 
+</style>
+<link rel='stylesheet' id='testtheme-responsive-css'  href='https://solverwp.com/wp-content/themes/testtheme/assets/css/responsive.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='testtheme-style-css'  href='https://solverwp.com/wp-content/themes/testtheme/style.css?ver=5.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-framework-css-frontend-css'  href='https://solverwp.com/wp-content/plugins/elementskit-lite/libs/framework/assets/css/frontend-style.min.css?ver=1.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-vendors-css'  href='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/vendors.css?ver=1.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-style-css'  href='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/style.css?ver=1.5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='elementskit-responsive-css'  href='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=1.5.6' type='text/css' media='all' />
+<script type='text/javascript' src='https://solverwp.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<link rel="https://api.w.org/" href="https://solverwp.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://solverwp.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://solverwp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.1" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body class="error404 hfeed elementor-default">
+
+    <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+              <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="https://solverwp.com/wp-content/themes/testtheme//assets/img/navbar-logo.svg" alt="" /></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                     <ul class="navbar-nav text-uppercase ml-auto"><li id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18 nav-item"><a href="#">HOME</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19 nav-item"><a href="#service">OUR SERVICE</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20 nav-item"><a href="#contactform">HIRE  US</a></li>
+</ul>                    
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url( https://solverwp.com/wp-content/themes/testtheme/assets/img/header-bg.jpg );">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To Our Studio!</div>
+                <div class="masthead-heading text-uppercase">IT&#039;S NICE TO MEET YOU</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#">Tell Me More</a>
+            </div>
+        </header>
+    	<div id="content" class="site-content">    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+        	<div class="banner banner--404">
+                <div class="banner--404-content">
+                    <span class="banner--404__xl-text">404</span>
+                    <span class="banner--404__text">Oops!! Page Not Found</span>
+                    <a
+                        href="https://solverwp.com/"
+                        class="button button__primary button__primary--rounded"
+                    >
+                       Back Home                    </a>
+                </div>
+                <!--404 content-->
+            </div>
+            <!-- Banner area end -->
+            </main><!-- #main -->
+    </div><!-- #primary -->
+
+	</div><!-- #content -->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        <a class="mr-3" href="#!">Privacy Policy</a>
+                        <a href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+
+             </div><!-- #page -->
+
+</div><script type='text/javascript' id='mail-chimp-script-js-extra'>
+/* <![CDATA[ */
+var ekit_site_url = {"siteurl":"https:\/\/solverwp.com"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/mail-chimp/assets/js/mail-chimp.js?ver=1.0' id='mail-chimp-script-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/popper.min.js?ver=1.0.0' id='popper-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/bootstrap.min.js?ver=1.0.0' id='bootstrap-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/jquery.magnific-popup.js?ver=1.0.0' id='magnific-popup-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/wow.min.js?ver=1.0.0' id='wow-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/owl.carousel.min.js?ver=1.0.0' id='owl-carousel-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/waypoints.min.js?ver=1.0.0' id='waypoints-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/jquery.counterup.min.js?ver=1.0.0' id='counterup-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/slick.min.js?ver=1.0.0' id='slick-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/slick-animation.js?ver=1.0.0' id='slick-animation-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/jquery.nice-select.min.js?ver=1.0.0' id='nice-select-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/jquery.filterizr.min.js?ver=1.0.0' id='filterizr-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/rprogressbar.min.js?ver=1.0.0' id='rprogressbar-js'></script>
+<script type='text/javascript' id='testtheme-main-script-js-extra'>
+/* <![CDATA[ */
+var testtheme_object = {"ajaxurl":"https:\/\/solverwp.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/themes/testtheme/assets/js/main.js?ver=1.0.0' id='testtheme-main-script-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=1.5.6' id='elementskit-framework-js-frontend-js'></script>
+<script type='text/javascript' id='elementskit-framework-js-frontend-js-after'>
+        //console.log(window.elementskit);
+
+		var elementskit = {
+            resturl: 'https://solverwp.com/wp-json/elementskit/v1/',
+        }
+
+        //console.log(window.elementskit);
+		
+</script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/nav-menu.js?ver=5.5.1' id='ekit-nav-menu-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/ui-slim.min.js?ver=5.5.1' id='ekit-slim-ui-js'></script>
+<script type='text/javascript' src='https://solverwp.com/wp-includes/js/wp-embed.min.js?ver=5.5.1' id='wp-embed-js'></script>
+</body>
+</html>

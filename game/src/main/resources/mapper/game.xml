@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="game.dao.GameDao">
+	<!-- 添加 -->
+	<insert id="insertGame" parameterType="Game">
+		insert into
+		game(gamename,price,supplierid,typeid)
+		values(#{gamename},#{price},#{supplierid},#{typeid})
+	</insert>
+
+	<!-- 修改 -->
+	<insert id="updateGame" parameterType="Game">
+		update game set
+		gamename=#{gamename},price=#{price},
+		supplierid=#{supplierid},typeid=#{typeid}
+		where id=#{id}
+	</insert>
+
+	<!-- 删除 -->
+	<delete id="deleteGame" parameterType="Integer">
+		delete from game
+		where
+		id=#{id}
+	</delete>
+
+	<!-- 查询 -->
+	<select id="findByGameName" parameterType="String"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type
+		from
+		game g
+		LEFT JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid = t.id
+		where gamename = #{gamename}
+	</select>
+
+	<!-- 查询所有 -->
+	<select id="findAllGame" parameterType="Game" resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid = t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	<!-- 查询总数 -->
+	<select id="selectGameCount" parameterType="Game"
+		resultType="Integer">
+		select count(*) from game
+	</select>
+
+	<!-- 模糊查询2 -->
+	<select id="findLikeGameName" parameterType="Game"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT
+		JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid =
+		t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		where
+		g.gamename like
+		CONCAT("%",CONCAT(#{gamename},"%"))
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 模糊查询总数 -->
+	<select id="selectLikeGameCount" parameterType="Game"
+		resultType="Integer">
+		select count(*) from game
+		where gamename like
+		CONCAT("%",CONCAT(#{gamename},"%"))
+	</select>
+
+	<!-- 厂商列表 -->
+	<select id="findByGameSupplierList" resultType="Supplier">
+		select * from
+		supplier
+	</select>
+
+	<!-- 类型列表 -->
+	<select id="findByGameTypeList" resultType="Type">
+		select * from type
+	</select>
+
+	<!-- 类型查询 -->
+	<select id="findByGameType" parameterType="Game"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT
+		JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid =
+		t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		where
+		g.typeid = #{typeid}
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 类型查询总数 -->
+	<select id="selectByGameType" parameterType="Game"
+		resultType="Integer">
+		select count(*) from game
+		where typeid = #{typeid}
+	</select>
+
+	<!-- 价格区间查询 -->
+	<select id="findGamePriceBetween" parameterType="Game"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT
+		JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid =
+		t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		where
+		price between #{low} and #{hight}
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 价格区间查询总数 -->
+	<select id="selectGamePriceBetween" parameterType="Game"
+		resultType="Integer">
+		select count(*) from game
+		where price between #{low} and
+		#{hight}
+	</select>
+
+	<!-- 售价高到低 -->
+	<select id="findGamePriceH2L" parameterType="Game"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT
+		JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid =
+		t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		order by
+		price desc
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 售价低到高 -->
+	<select id="findGamePriceL2H" parameterType="Game"
+		resultType="Game">
+		select g.id,g.gamename,g.price,s.suppliername,t.type,i.imgurl
+		from game
+		g
+		LEFT
+		JOIN supplier s ON g.supplierid = s.id
+		LEFT JOIN type t ON
+		g.typeid =
+		t.id
+		LEFT JOIN gameimg i ON g.gamename = i.gamename
+		order by
+		price
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+
+	<!-- 添加图片 -->
+	<insert id="insertGameimg" parameterType="Game">
+		insert into
+		gameimg(gamename,imgurl)
+		values(#{gamename},#{imgurl})
+	</insert>
+
+	<!-- 修改图片 -->
+	<insert id="updateGameimg" parameterType="Game">
+		update gameimg set
+		imgurl=#{imgurl}
+		where id=#{id}
+	</insert>
+
+	<!-- 删除图片 -->
+	<delete id="deleteGameimg" parameterType="Integer">
+		delete from gameimg
+		where
+		id=#{id}
+	</delete>
+
+	<!-- 查询图片 -->
+	<select id="findByGameImg" parameterType="String"
+		resultType="Game">
+		select * from gameimg
+		where gamename = #{gamename}
+	</select>
+
+	<!-- 查询所有图片 -->
+	<select id="findAllGameImg" parameterType="Game"
+		resultType="Game">
+		select * from gameimg
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	<!-- 查询图片总数 -->
+	<select id="selectGameImgCount" parameterType="Game"
+		resultType="Integer">
+		select count(*) from gameimg
+	</select>
+
+	<!-- 模糊查询图片 -->
+	<select id="findLikeGameImgName" parameterType="Game"
+		resultType="Game">
+		select * from gameimg
+		where gamename like
+		CONCAT("%",CONCAT(#{gamename},"%"))
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 模糊查询图片总数 -->
+	<select id="selectLikeGameImgCount" parameterType="Game"
+		resultType="Integer">
+		select count(*) from gameimg
+		where gamename like
+		CONCAT("%",CONCAT(#{gamename},"%"))
+	</select>
+</mapper>

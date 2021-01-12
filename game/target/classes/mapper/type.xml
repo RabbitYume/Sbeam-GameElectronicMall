@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="game.dao.TypeDao">
+
+	<!-- 添加 -->
+	<insert id="insertType" parameterType="Type">
+		insert into
+		type(type)
+		values(#{type})
+	</insert>
+
+	<!-- 修改 -->
+	<insert id="updateType" parameterType="Type">
+		update type set
+		type=#{type} where id=#{id}
+	</insert>
+
+	<!-- 查询 -->
+	<select id="findByTypeName" parameterType="String"
+		resultType="Type">
+		select * from type where type = #{type}
+	</select>
+
+	<!-- 查询所有 -->
+	<select id="findAllType" parameterType="Type" resultType="Type">
+		select * from type
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	<!-- 查询总数 -->
+	<select id="selectTypeCount" parameterType="Type"
+		resultType="Integer">
+		select count(*) from type
+	</select>
+
+	<!-- 删除 -->
+	<delete id="deleteType" parameterType="Integer">
+		delete from type
+		where
+		id=#{id}
+	</delete>
+
+	<!-- 模糊查询2 -->
+	<select id="findLikeTypeName" parameterType="Type"
+		resultType="Type">
+		select * from type where
+		type like
+		CONCAT("%",CONCAT(#{type},"%"))
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 模糊查询总数 -->
+	<select id="selectLikeTypeCount" parameterType="Type"
+		resultType="Integer">
+		select count(*) from type
+		where type like
+		CONCAT("%",CONCAT(#{type},"%"))
+	</select>
+
+</mapper>

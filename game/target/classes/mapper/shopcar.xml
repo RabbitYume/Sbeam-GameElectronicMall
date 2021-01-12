@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="game.dao.ShopCarDao">
+
+	<!-- 添加 -->
+	<insert id="insertShopcar" parameterType="Shopcar">
+		insert into
+		shopcar(gameid,gameprice,username)
+		values(#{gameid},#{gameprice},#{username})
+	</insert>
+
+	<!-- 删除 -->
+	<delete id="deleteShopcar" parameterType="Integer">
+		delete from shopcar
+		where
+		id=#{id}
+	</delete>
+
+	<!-- 删除全部 -->
+	<delete id="deleteShopcarAll" parameterType="String">
+		delete from shopcar
+		where
+		username=#{username}
+	</delete>
+
+	<!-- 查询所有 -->
+	<select id="findAllShopcar" parameterType="String"
+		resultType="Shopcar">
+		select sc.id,sc.gameid,g.gamename,sc.gameprice from shopcar sc
+		LEFT JOIN
+		game g ON g.id = sc.gameid
+		where username=#{username}
+	</select>
+
+	<!-- 查询总金额 -->
+	<select id="selectSumPrice" parameterType="String"
+		resultType="Double">
+		select SUM(gameprice) from shopcar where
+		username=#{username} group by username
+	</select>
+	
+	<!-- 查询购物车是否存在 -->
+	<select id="selectGame" parameterType="Game"
+		resultType="Shopcar">
+		select * from shopcar
+		where username=#{username} and gameid=#{gameid}
+	</select>
+
+</mapper>

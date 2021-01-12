@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="game.dao.UserDao">
+
+	<!-- 添加 -->
+	<insert id="insert" parameterType="User">
+		insert into
+		user(username,userpwd) values(#{username},#{userpwd})
+	</insert>
+
+	<!-- 修改 -->
+	<insert id="update" parameterType="User">
+		update user set
+		username=#{username} ,userpwd=#{userpwd} where id=#{id}
+	</insert>
+	
+	<!-- 修改密码 -->
+	<insert id="updatePwd" parameterType="User">
+		update user set userpwd=#{userpwd} where username=#{username}
+	</insert>
+
+	<!-- 查询 -->
+	<select id="findByName" parameterType="String" resultType="User">
+		select * from user where username = #{username}
+	</select>
+
+	<!-- 查询所有 -->
+	<select id="findAll" parameterType="User" resultType="User">
+		select * from user
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+	<!-- 查询总数 -->
+	<select id="selectUserCount" parameterType="User"
+		resultType="Integer">
+		select count(*) from user
+	</select>
+
+	<!-- 登录 -->
+	<select id="login" parameterType="String" resultType="User">
+		select *
+		from user where username=#{username} and
+		userpwd=#{userpwd}
+	</select>
+
+	<!-- 删除 -->
+	<delete id="delete" parameterType="Integer">
+		delete from user where
+		id=#{id}
+	</delete>
+
+	<!-- 模糊查询2 -->
+	<select id="findLikeName" parameterType="User" resultType="User">
+		select * from user where
+		username like CONCAT("%",CONCAT(#{username},"%"))
+		<!-- 执行分页查询 -->
+		<if test="start !=null and rows != null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<!-- 模糊查询总数 -->
+	<select id="selectLikeUserCount" parameterType="User"
+		resultType="Integer">
+		select count(*) from user
+		where username like CONCAT("%",CONCAT(#{username},"%"))
+	</select>
+
+</mapper>

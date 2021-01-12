@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 元素类型为 "configuration" 的内容必须匹配 "(properties?,settings?,
+	typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,
+	plugins?,environments?,databaseIdProvider?,mappers?) 各属性要按顺序进行设置-->
+
+    <!-- 给映射的类别名 -->
+ 	 <typeAliases>
+ 	  <!--   单一设置别名 -->
+	    <typeAlias alias="User" type="game.entity.User"/>
+	    <typeAlias alias="Game" type="game.entity.Game"/>
+	    <typeAlias alias="Order" type="game.entity.Order"/>
+	    <typeAlias alias="Shopcar" type="game.entity.Shopcar"/>
+	    <typeAlias alias="Supplier" type="game.entity.Supplier"/>
+	    <typeAlias alias="Type" type="game.entity.Type"/>
+	   <!--  包范围内设置别名 -->
+	    <!-- <package name="mybatisDemo.entity"></package> -->
+	</typeAliases>  
+
+</configuration>
