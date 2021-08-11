@@ -1,1 +1,8 @@
-# Sbeam-GameElectronicMall
+#这个项目是什么       
+商品销售管理系统，包括商品的销售，以及销售记录、商品、供货商、员工的增删查改。      
+# 版本   
+使用了Spring MVC、JDBC、mysql、jsp
+# 如何使用   
+找到sql文件导入数据库。使用tomcat运行。
+# 效果图   
+详见PPT
